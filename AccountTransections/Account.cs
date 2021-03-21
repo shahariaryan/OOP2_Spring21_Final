@@ -8,17 +8,18 @@ namespace AccountTransections
 {
     class Account
     {
+     
         public string AccName { get; set; }
         public string AccNo { get; }
         public double Balance { get; set; }
 
-        public Transections[] transections;
-        public int totalNumberOfTransections;
+        Transections[] transections;
+        public int totalNumberOfTransections { get; set; }
 
         public Account() {
             transections = new Transections[10];
         }
-
+           
         public Account(string accName, string accNo, double balance)
         {
             AccName = accName;
@@ -29,9 +30,10 @@ namespace AccountTransections
         public void addTransaction(params Transections[] transections)
 
         {
-           foreach(var a in transections)
+           foreach(Transections transaction in transections)
             {
-                this.transections[totalNumberOfTransections++] = a;
+                this.transections[totalNumberOfTransections++] = transaction;
+              
             }
         }
 
@@ -71,13 +73,13 @@ namespace AccountTransections
         }
         
 
-        virtual public void Transfer(Account a, int amount)
+        virtual public void Transfer(Account transaction, int amount)
         {
             if(amount<Balance)
             {
                 Balance -= amount;
                 Console.WriteLine("Balance now is {0}}:", Balance);
-                transections[totalNumberOfTransections++] = new Transections(this, a, amount, "Transfer");
+                transections[totalNumberOfTransections++] = new Transections(this, transaction, amount, "Transfer");
             }
             else
             {
