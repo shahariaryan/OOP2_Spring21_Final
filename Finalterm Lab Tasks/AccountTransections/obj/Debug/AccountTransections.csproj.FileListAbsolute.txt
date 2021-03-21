@@ -1,0 +1,7 @@
+Z:\Study\Git\Finalterm Lab Tasks\AccountTransections\obj\Debug\AccountTransections.csprojAssemblyReference.cache
+Z:\Study\Git\Finalterm Lab Tasks\AccountTransections\obj\Debug\AccountTransections.csproj.CoreCompileInputs.cache
+Z:\Study\Git\Finalterm Lab Tasks\AccountTransections\bin\Debug\AccountTransections.exe.config
+Z:\Study\Git\Finalterm Lab Tasks\AccountTransections\bin\Debug\AccountTransections.exe
+Z:\Study\Git\Finalterm Lab Tasks\AccountTransections\bin\Debug\AccountTransections.pdb
+Z:\Study\Git\Finalterm Lab Tasks\AccountTransections\obj\Debug\AccountTransections.exe
+Z:\Study\Git\Finalterm Lab Tasks\AccountTransections\obj\Debug\AccountTransections.pdb

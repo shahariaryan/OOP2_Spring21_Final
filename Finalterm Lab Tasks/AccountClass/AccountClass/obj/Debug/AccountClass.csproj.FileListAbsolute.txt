@@ -1,0 +1,7 @@
+Z:\Visual Studio Codes\AccountClass\AccountClass\obj\Debug\AccountClass.csprojAssemblyReference.cache
+Z:\Visual Studio Codes\AccountClass\AccountClass\obj\Debug\AccountClass.csproj.CoreCompileInputs.cache
+Z:\Visual Studio Codes\AccountClass\AccountClass\bin\Debug\AccountClass.exe.config
+Z:\Visual Studio Codes\AccountClass\AccountClass\bin\Debug\AccountClass.exe
+Z:\Visual Studio Codes\AccountClass\AccountClass\bin\Debug\AccountClass.pdb
+Z:\Visual Studio Codes\AccountClass\AccountClass\obj\Debug\AccountClass.exe
+Z:\Visual Studio Codes\AccountClass\AccountClass\obj\Debug\AccountClass.pdb
