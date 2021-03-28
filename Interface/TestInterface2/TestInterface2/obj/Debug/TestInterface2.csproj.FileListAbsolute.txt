@@ -1,0 +1,7 @@
+Z:\Study\gitFinal\Interface\TestInterface2\TestInterface2\obj\Debug\TestInterface2.csprojAssemblyReference.cache
+Z:\Study\gitFinal\Interface\TestInterface2\TestInterface2\obj\Debug\TestInterface2.csproj.CoreCompileInputs.cache
+Z:\Study\gitFinal\Interface\TestInterface2\TestInterface2\bin\Debug\TestInterface2.exe.config
+Z:\Study\gitFinal\Interface\TestInterface2\TestInterface2\bin\Debug\TestInterface2.exe
+Z:\Study\gitFinal\Interface\TestInterface2\TestInterface2\bin\Debug\TestInterface2.pdb
+Z:\Study\gitFinal\Interface\TestInterface2\TestInterface2\obj\Debug\TestInterface2.exe
+Z:\Study\gitFinal\Interface\TestInterface2\TestInterface2\obj\Debug\TestInterface2.pdb
