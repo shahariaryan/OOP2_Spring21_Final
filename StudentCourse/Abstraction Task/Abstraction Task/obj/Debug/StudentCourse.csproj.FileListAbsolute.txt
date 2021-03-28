@@ -1,0 +1,7 @@
+Z:\Study\gitFinal\StudentCourse\Abstraction Task\Abstraction Task\bin\Debug\Abstraction Task.exe.config
+Z:\Study\gitFinal\StudentCourse\Abstraction Task\Abstraction Task\bin\Debug\Abstraction Task.exe
+Z:\Study\gitFinal\StudentCourse\Abstraction Task\Abstraction Task\bin\Debug\Abstraction Task.pdb
+Z:\Study\gitFinal\StudentCourse\Abstraction Task\Abstraction Task\obj\Debug\StudentCourse.csprojAssemblyReference.cache
+Z:\Study\gitFinal\StudentCourse\Abstraction Task\Abstraction Task\obj\Debug\StudentCourse.csproj.CoreCompileInputs.cache
+Z:\Study\gitFinal\StudentCourse\Abstraction Task\Abstraction Task\obj\Debug\Abstraction Task.exe
+Z:\Study\gitFinal\StudentCourse\Abstraction Task\Abstraction Task\obj\Debug\Abstraction Task.pdb

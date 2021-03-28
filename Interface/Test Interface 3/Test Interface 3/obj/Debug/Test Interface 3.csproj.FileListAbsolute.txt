@@ -1,0 +1,7 @@
+Z:\Study\gitFinal\Interface\Test Interface 3\Test Interface 3\bin\Debug\Test Interface 3.exe.config
+Z:\Study\gitFinal\Interface\Test Interface 3\Test Interface 3\bin\Debug\Test Interface 3.exe
+Z:\Study\gitFinal\Interface\Test Interface 3\Test Interface 3\bin\Debug\Test Interface 3.pdb
+Z:\Study\gitFinal\Interface\Test Interface 3\Test Interface 3\obj\Debug\Test Interface 3.csprojAssemblyReference.cache
+Z:\Study\gitFinal\Interface\Test Interface 3\Test Interface 3\obj\Debug\Test Interface 3.csproj.CoreCompileInputs.cache
+Z:\Study\gitFinal\Interface\Test Interface 3\Test Interface 3\obj\Debug\Test Interface 3.exe
+Z:\Study\gitFinal\Interface\Test Interface 3\Test Interface 3\obj\Debug\Test Interface 3.pdb
