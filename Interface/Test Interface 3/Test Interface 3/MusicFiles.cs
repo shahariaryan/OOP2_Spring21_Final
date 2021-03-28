@@ -24,12 +24,6 @@ namespace Test_Interface_3
             YOR = yearOfRelease;
             DIS = durationInSeconds;
         }
-        public void ShowInfo()
-        {
-            Console.WriteLine("Title Name: " + Title);
-            Console.WriteLine("Artist Name: " + Artist);
-            Console.WriteLine("Year of Release: " + YOR);
-            Console.WriteLine("Duration in Secons" +DIS);
-        }
+       
     }
 }

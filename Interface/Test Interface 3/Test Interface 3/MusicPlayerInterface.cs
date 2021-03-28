@@ -8,8 +8,8 @@ namespace Test_Interface_3
 {
     interface MusicPlayerInterface
     {
-        void switching(boolean on);
-        void play(boolean on);
+        void switching(bool on);
+        void play(bool on);
         void setVolume(int loudness);
         void playNext();
         void playPrevious();

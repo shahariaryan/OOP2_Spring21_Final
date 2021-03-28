@@ -10,9 +10,14 @@ namespace Test_Interface_3
     {
         static void Main(string[] args)
         {
-            Phone p1 = new Phone("Nokia", "1111");
-            p1.ShowInfo();
-            p1.switching(true);
+            MusicFiles m1 = new MusicFiles("Abc", "AVVV", 2020, 130);
+            MusicFiles m2 = new MusicFiles("Asssc", "AAAVVV", 2019, 120);
+
+
+            Phone p1 = new Phone("iPhone","11s",50);
+            p1.AddMusicFile(m1,m2);
+            
+
         }
     }
 }

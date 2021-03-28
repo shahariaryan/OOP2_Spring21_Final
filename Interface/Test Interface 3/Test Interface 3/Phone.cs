@@ -6,35 +6,53 @@ using System.Threading.Tasks;
 
 namespace Test_Interface_3
 {
-    
+
 
     class Phone : RadioPlayerInterface, MusicPlayerInterface
     {
+
         public string PhoneName { get; set; }
         public string PhoneModel { get; set; }
+        public int Volume { get; set; }
 
         MusicFiles[] musicFiles;
         public int totalfiles { get; set; }
 
         public Phone()
         {
-            musicFiles = new MusicFiles[100];
+            
         }
-        public Phone(string phonename, string phoneModel)
+        public Phone(string phonename, string phoneModel, int volume)
         {
             PhoneName = phonename;
             PhoneModel = phoneModel;
+            Volume = volume;
             musicFiles = new MusicFiles[100];
         }
-        public void changeChannel()
+        public void AddMusicFile(params MusicFiles[] musicfiles)
+        {
+            foreach (MusicFiles m in musicfiles)
+            {
+                this.musicFiles[totalfiles++] = m;
+            }
+        }
+            public void changeChannel()
         {
             Console.WriteLine("Chaneel Changed");
-            
+
         }
 
-        public void play(boolean on)
+        public void play(bool on)
         {
-            Console.WriteLine("Turnned on");
+            if (on)
+            {
+                Console.WriteLine("off");
+
+            }
+            else
+            {
+                Console.WriteLine("on");
+            }
         }
 
         public void playNext()
@@ -50,31 +68,37 @@ namespace Test_Interface_3
         public void retune(double frequency)
         {
             Console.WriteLine("The Frequency is Changed to {0} ", frequency);
-         
+
         }
 
         public void setVolume(int loudness)
         {
-            for(loudness=0; loudness>=100; loudness++)
+            if (loudness > Volume)
             {
-                Console.WriteLine("Volume Increasd to {0} ", loudness);
+                int newVolume = loudness + Volume;
+                Console.WriteLine("Volume decreased by " + newVolume);
             }
-            for (loudness = 0; loudness >= 100; loudness--)
+            else if (loudness < Volume)
             {
-                Console.WriteLine("Volume Decreased to {0} ", loudness);
+                int newVolume = Volume - loudness;
+                Console.WriteLine("Volume decreased by " + newVolume);
             }
 
         }
 
-        public void switching(boolean on)
+        public void switching(bool on)
         {
-            Console.WriteLine("Switch is off");
-           
+            if (on)
+            {
+                Console.WriteLine("off");
+
+            }
+            else
+            {
+                Console.WriteLine("on");
+            }
+
         }
-        public void ShowInfo()
-        {
-            Console.WriteLine("Phone Name: " + PhoneName);
-            Console.WriteLine("Phone Model: " + PhoneModel);
-        }
-}
+       
+    }
  }

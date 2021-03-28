@@ -8,7 +8,7 @@ namespace Test_Interface_3
 {
     interface RadioPlayerInterface
     {
-          void switching(boolean on);
+          void switching(bool on);
          void retune(double frequency);
          void setVolume(int loudness);
          void changeChannel();
