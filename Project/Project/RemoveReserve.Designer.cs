@@ -50,13 +50,14 @@ namespace Project
             // 
             // btnSearchId
             // 
+            this.btnSearchId.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnSearchId.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearchId.Location = new System.Drawing.Point(432, 124);
+            this.btnSearchId.Location = new System.Drawing.Point(432, 121);
             this.btnSearchId.Name = "btnSearchId";
-            this.btnSearchId.Size = new System.Drawing.Size(95, 26);
+            this.btnSearchId.Size = new System.Drawing.Size(95, 30);
             this.btnSearchId.TabIndex = 98;
             this.btnSearchId.Text = "Search";
-            this.btnSearchId.UseVisualStyleBackColor = true;
+            this.btnSearchId.UseVisualStyleBackColor = false;
             this.btnSearchId.Click += new System.EventHandler(this.btnSearchId_Click);
             // 
             // label2
@@ -189,13 +190,14 @@ namespace Project
             // 
             // btnRemove
             // 
+            this.btnRemove.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnRemove.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemove.Location = new System.Drawing.Point(343, 496);
+            this.btnRemove.Location = new System.Drawing.Point(343, 493);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(105, 33);
+            this.btnRemove.Size = new System.Drawing.Size(105, 37);
             this.btnRemove.TabIndex = 121;
             this.btnRemove.Text = "Remove";
-            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.UseVisualStyleBackColor = false;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // label5
@@ -220,8 +222,8 @@ namespace Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(628, 601);
+            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.ClientSize = new System.Drawing.Size(628, 602);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cbType);
             this.Controls.Add(this.label3);
@@ -239,6 +241,7 @@ namespace Project
             this.Controls.Add(this.btnSearchId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.searchReserveName);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "RemoveReserve";
             this.Text = "RemoveReserve";
             this.ResumeLayout(false);

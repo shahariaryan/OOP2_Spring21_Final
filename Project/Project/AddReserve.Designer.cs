@@ -48,13 +48,14 @@ namespace Project
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.button1.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(559, 12);
+            this.button1.Location = new System.Drawing.Point(532, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 33);
             this.button1.TabIndex = 47;
             this.button1.Text = "Home";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
@@ -149,13 +150,14 @@ namespace Project
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnAdd.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(409, 412);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(105, 33);
             this.btnAdd.TabIndex = 43;
             this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label5
@@ -181,6 +183,7 @@ namespace Project
             // cbType
             // 
             this.cbType.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbType.ForeColor = System.Drawing.Color.Black;
             this.cbType.FormattingEnabled = true;
             this.cbType.Items.AddRange(new object[] {
             "Lunch",
@@ -211,8 +214,8 @@ namespace Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(676, 538);
+            this.BackColor = System.Drawing.Color.CadetBlue;
+            this.ClientSize = new System.Drawing.Size(659, 538);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cbType);
             this.Controls.Add(this.button1);
@@ -228,6 +231,7 @@ namespace Project
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tbPhone);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "AddReserve";
             this.Text = "AddReserve";
             this.ResumeLayout(false);

@@ -63,10 +63,12 @@ namespace Project
             if (r > 0)
             {
                 MessageBox.Show("New Account Created");
+                new Login().Show();
             }
             else
             {
                 MessageBox.Show("Error");
+                new Form1().Show();
             }
             conn.Close();
         }

@@ -51,8 +51,10 @@ namespace Project
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.CadetBlue;
             this.label2.Font = new System.Drawing.Font("Cambria", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(143, 32);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(136, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(357, 43);
             this.label2.TabIndex = 1;
@@ -72,6 +74,7 @@ namespace Project
             // 
             // tbName
             // 
+            this.tbName.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.tbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbName.Location = new System.Drawing.Point(231, 106);
             this.tbName.Name = "tbName";
@@ -152,13 +155,15 @@ namespace Project
             // 
             // btnSignUp
             // 
+            this.btnSignUp.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnSignUp.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignUp.ForeColor = System.Drawing.Color.White;
             this.btnSignUp.Location = new System.Drawing.Point(355, 376);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(117, 38);
             this.btnSignUp.TabIndex = 16;
             this.btnSignUp.Text = "Create";
-            this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.UseVisualStyleBackColor = false;
             this.btnSignUp.Click += new System.EventHandler(this.SignUp);
             // 
             // label6
@@ -225,7 +230,7 @@ namespace Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(604, 468);
             this.Controls.Add(this.gbGender);
             this.Controls.Add(this.btnSignUp);
@@ -240,7 +245,7 @@ namespace Project
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "Form1";
             this.Text = "SignUp";
             this.Load += new System.EventHandler(this.Form1_Load);

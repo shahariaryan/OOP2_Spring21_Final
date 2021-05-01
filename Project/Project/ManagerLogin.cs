@@ -54,5 +54,11 @@ namespace Project
                 Application.Exit();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Homepage().Show();
+        }
     }
 }

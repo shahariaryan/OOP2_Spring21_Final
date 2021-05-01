@@ -127,5 +127,15 @@ namespace Project
             this.Hide();
             new Dashboard().Show();
         }
+
+        private void dtReserve_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void drReserve_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

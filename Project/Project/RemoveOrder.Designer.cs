@@ -46,13 +46,14 @@ namespace Project
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.button1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(418, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(70, 27);
             this.button1.TabIndex = 103;
             this.button1.Text = "Home";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
@@ -67,13 +68,14 @@ namespace Project
             // 
             // btnSearchId
             // 
+            this.btnSearchId.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnSearchId.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchId.Location = new System.Drawing.Point(293, 170);
             this.btnSearchId.Name = "btnSearchId";
             this.btnSearchId.Size = new System.Drawing.Size(105, 33);
             this.btnSearchId.TabIndex = 101;
             this.btnSearchId.Text = "Search";
-            this.btnSearchId.UseVisualStyleBackColor = true;
+            this.btnSearchId.UseVisualStyleBackColor = false;
             this.btnSearchId.Click += new System.EventHandler(this.btnSearchId_Click);
             // 
             // label2
@@ -114,13 +116,14 @@ namespace Project
             // 
             // btnRemove
             // 
+            this.btnRemove.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnRemove.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.Location = new System.Drawing.Point(293, 395);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(105, 33);
             this.btnRemove.TabIndex = 96;
             this.btnRemove.Text = "Remove";
-            this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.UseVisualStyleBackColor = false;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // tbName
@@ -172,7 +175,7 @@ namespace Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(500, 492);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
@@ -187,6 +190,7 @@ namespace Project
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tbPrice);
             this.Controls.Add(this.label4);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "RemoveOrder";
             this.Text = "RemoveOrder";
             this.ResumeLayout(false);

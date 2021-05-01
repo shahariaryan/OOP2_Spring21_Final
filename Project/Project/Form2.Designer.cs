@@ -36,13 +36,14 @@ namespace Project
             this.label2 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnReg = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(181, 27);
+            this.label1.Location = new System.Drawing.Point(200, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 43);
             this.label1.TabIndex = 0;
@@ -92,32 +93,49 @@ namespace Project
             // 
             // btnLogin
             // 
+            this.btnLogin.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnLogin.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.Location = new System.Drawing.Point(299, 238);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(103, 45);
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Log In";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnReg
             // 
+            this.btnReg.BackColor = System.Drawing.Color.LightSeaGreen;
             this.btnReg.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReg.Location = new System.Drawing.Point(54, 238);
+            this.btnReg.ForeColor = System.Drawing.Color.White;
+            this.btnReg.Location = new System.Drawing.Point(39, 238);
             this.btnReg.Name = "btnReg";
-            this.btnReg.Size = new System.Drawing.Size(123, 45);
+            this.btnReg.Size = new System.Drawing.Size(113, 45);
             this.btnReg.TabIndex = 7;
             this.btnReg.Text = "Sign Up";
-            this.btnReg.UseVisualStyleBackColor = true;
+            this.btnReg.UseVisualStyleBackColor = false;
             this.btnReg.Click += new System.EventHandler(this.btnReg_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.button1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(71, 28);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(488, 341);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnReg);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.tbPass);
@@ -125,6 +143,7 @@ namespace Project
             this.Controls.Add(this.tbUname);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "Login";
             this.Text = " ";
             this.ResumeLayout(false);
@@ -141,5 +160,6 @@ namespace Project
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnReg;
+        private System.Windows.Forms.Button button1;
     }
 }

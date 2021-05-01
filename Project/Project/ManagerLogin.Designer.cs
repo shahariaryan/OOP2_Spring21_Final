@@ -35,12 +35,13 @@ namespace Project
             this.tbUname = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(319, 283);
+            this.btnLogin.Location = new System.Drawing.Point(318, 277);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(103, 45);
             this.btnLogin.TabIndex = 13;
@@ -51,7 +52,7 @@ namespace Project
             // tbPass
             // 
             this.tbPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPass.Location = new System.Drawing.Point(199, 213);
+            this.tbPass.Location = new System.Drawing.Point(198, 207);
             this.tbPass.Name = "tbPass";
             this.tbPass.PasswordChar = '*';
             this.tbPass.Size = new System.Drawing.Size(223, 29);
@@ -61,7 +62,7 @@ namespace Project
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(54, 212);
+            this.label2.Location = new System.Drawing.Point(53, 206);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 28);
             this.label2.TabIndex = 11;
@@ -70,7 +71,7 @@ namespace Project
             // tbUname
             // 
             this.tbUname.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUname.Location = new System.Drawing.Point(199, 158);
+            this.tbUname.Location = new System.Drawing.Point(198, 152);
             this.tbUname.Name = "tbUname";
             this.tbUname.Size = new System.Drawing.Size(223, 29);
             this.tbUname.TabIndex = 10;
@@ -79,7 +80,7 @@ namespace Project
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cambria", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(54, 157);
+            this.label3.Location = new System.Drawing.Point(53, 151);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 28);
             this.label3.TabIndex = 9;
@@ -89,18 +90,30 @@ namespace Project
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(108, 78);
+            this.label1.Location = new System.Drawing.Point(107, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(270, 43);
             this.label1.TabIndex = 8;
             this.label1.Text = "Manager Login";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(65, 30);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ManagerLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(502, 450);
+            this.ClientSize = new System.Drawing.Size(502, 371);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.tbPass);
             this.Controls.Add(this.label2);
@@ -121,5 +134,6 @@ namespace Project
         private System.Windows.Forms.TextBox tbUname;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

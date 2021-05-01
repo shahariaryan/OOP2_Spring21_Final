@@ -63,7 +63,7 @@ namespace Project
             int r = cmd.ExecuteNonQuery();
             conn.Close();
             this.Hide();
-            new CheckItem().Show();
+            new CheckOrder().Show();
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
