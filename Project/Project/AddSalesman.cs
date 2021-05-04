@@ -30,22 +30,99 @@ namespace Project
             string type = "salesman";
             string salary = tbSalary.Text;
 
-            var conn = Database.ConnectDB();
-            conn.Open();
-
-            string query = string.Format("Insert into users values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", name, uname, email, gender, pass, type, salary);
-            SqlCommand cmd = new SqlCommand(query, conn);
-            int r = cmd.ExecuteNonQuery();
-            if (r > 0)
+            string errMsg = null;
+            if (tbName.Text.Equals(""))
             {
-                MessageBox.Show("New Salesman Added");
-                new ManagerDash().Show();
+                errMsg += "\nName Requried";
             }
             else
             {
-                MessageBox.Show("Error");
+                name = tbName.Text;
             }
-            conn.Close();
+
+            if (tbUname.Text.Equals(""))
+            {
+                errMsg += "\nUsername Requried";
+            }
+            else
+            {
+                uname = tbUname.Text;
+            }
+
+
+            if (tbEmail.Text.Equals(""))
+            {
+                errMsg += "\nEmail Requried";
+            }
+            else
+            {
+                email = tbEmail.Text;
+            }
+
+            /*if (!gbGender.Checked)
+            {
+                errMsg += "\nGender Requried";
+            }
+            else
+            {
+                gender = gbGender.Controls.OfType<RadioButton>().FirstOrDefault(rb => rb.Checked).Text;
+            }*/
+
+            if (tbPass.Text.Equals(""))
+            {
+                errMsg += "\nPassword Requried";
+            }
+            else
+            {
+                pass = tbPass.Text;
+            }
+
+            if (tbSalary.Text.Equals(""))
+            {
+                errMsg += "\nSalary Requried";
+            }
+            else
+            {
+                salary = tbSalary.Text;
+            }
+
+            if (errMsg == null)
+            {
+
+                var conn = Database.ConnectDB();
+                conn.Open();
+
+                string query = string.Format("Insert into users values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", name, uname, email, gender, pass, type, salary);
+                SqlCommand cmd = new SqlCommand(query, conn);
+                int r = cmd.ExecuteNonQuery();
+                if (r > 0)
+                {
+                    MessageBox.Show("New Salesman Added");
+                    new ManagerDash().Show();
+                }
+                else
+                {
+                    MessageBox.Show("Error");
+                }
+                conn.Close();
+                RefreshControls();
+            }
+            else
+            {
+                MessageBox.Show(errMsg);
+                new AddSalesman().Show();
+            }
+        }
+
+        void RefreshControls() 
+        {
+            tbName.Text = "";
+            tbUname.Text = "";
+            tbEmail.Text = "";
+            //gbGender.Text = "Select Gender";
+            tbPass.Text = "";
+            tbSalary.Text = "";
+           
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {

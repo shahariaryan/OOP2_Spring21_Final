@@ -37,22 +37,80 @@ namespace Project
             string quantity = tbQuantity.Text;
             var cost = tbCost.Text;
 
-            var conn = Database.ConnectDB();
-            conn.Open();
-
-            string query = string.Format("Insert into items values ('{0}','{1}','{2}','{3}')", name, type, quantity, cost);
-            SqlCommand cmd = new SqlCommand(query, conn);
-            int r = cmd.ExecuteNonQuery();
-            if (r > 0)
+            string errMsg = null;
+            if (tbName.Text.Equals(""))
             {
-                MessageBox.Show("Item Added");
-                new ManagerDash().Show();
+                errMsg += "\nName Requried";
             }
             else
             {
-                MessageBox.Show("Error");
+                name = tbName.Text;
             }
-            conn.Close();
+
+            if (tbType.Text.Equals(""))
+            {
+                errMsg += "\nType Requried";
+            }
+            else
+            {
+                type = tbType.Text;
+            }
+
+
+            if (tbQuantity.Text.Equals(""))
+            {
+                errMsg += "\nQuantity Requried";
+            }
+            else
+            {
+                quantity = tbQuantity.Text;
+            }
+
+
+            if (tbCost.Text.Equals(""))
+            {
+                errMsg += "\nCost Requried";
+            }
+            else
+            {
+                cost = tbCost.Text;
+            }
+
+
+            if (errMsg == null)
+            {
+
+                var conn = Database.ConnectDB();
+                conn.Open();
+
+                string query = string.Format("Insert into items values ('{0}','{1}','{2}','{3}')", name, type, quantity, cost);
+                SqlCommand cmd = new SqlCommand(query, conn);
+                int r = cmd.ExecuteNonQuery();
+                if (r > 0)
+                {
+                    MessageBox.Show("Item Added");
+                    new ManagerDash().Show();
+                }
+                else
+                {
+                    MessageBox.Show("Error");
+                }
+                conn.Close();
+                RefreshControls();
+            }
+            else
+            {
+                MessageBox.Show(errMsg);
+
+            }
+        }
+        void RefreshControls()
+        {
+            tbName.Text = "";
+            tbType.Text = "";
+            tbQuantity.Text = "";
+            tbCost.Text = "";
+
         }
         protected override void OnFormClosing(FormClosingEventArgs e)
         {

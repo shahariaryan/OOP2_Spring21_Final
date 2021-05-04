@@ -173,6 +173,7 @@ namespace Project
             // 
             this.gbType.Controls.Add(this.radioButton1);
             this.gbType.Controls.Add(this.radioButton2);
+            this.gbType.ForeColor = System.Drawing.Color.Transparent;
             this.gbType.Location = new System.Drawing.Point(202, 380);
             this.gbType.Name = "gbType";
             this.gbType.Size = new System.Drawing.Size(220, 53);

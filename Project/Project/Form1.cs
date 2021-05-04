@@ -49,28 +49,80 @@ namespace Project
             string name = tbName.Text;
             string uname = tbUname.Text;
             string email = tbEmail.Text;
-            var gender = gbGender.Controls.OfType<RadioButton>().FirstOrDefault(rb=>rb.Checked).Text;
+            var gender = gbGender.Controls.OfType<RadioButton>().FirstOrDefault(rb => rb.Checked).Text;
             string pass = tbPass.Text;
             string type = "salesman";
             string salary = "";
 
-            var conn=Database.ConnectDB();
-            conn.Open();
-
-            string query = string.Format("Insert into users values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", name, uname, email, gender, pass,type,salary);
-            SqlCommand cmd = new SqlCommand(query,conn);
-            int r = cmd.ExecuteNonQuery();
-            if (r > 0)
+            string errMsg = null;
+            if (tbName.Text.Equals(""))
             {
-                MessageBox.Show("New Account Created");
-                new Login().Show();
+                errMsg += "\nName Requried";
             }
             else
             {
-                MessageBox.Show("Error");
-                new Form1().Show();
+                name = tbName.Text;
             }
-            conn.Close();
+
+            if (tbUname.Text.Equals(""))
+            {
+                errMsg += "\nUsername Requried";
+            }
+            else
+            {
+                uname = tbUname.Text;
+            }
+
+            if (tbEmail.Text.Equals(""))
+            {
+                errMsg += "\nEmail Requried";
+            }
+            else
+            {
+                email = tbEmail.Text;
+            }
+            if (tbPass.Text.Equals(""))
+            {
+                errMsg += "\nPassword Requried";
+            }
+            else
+            {
+                pass = tbPass.Text;
+            }
+
+
+            if (errMsg == null)
+            {
+                var conn = Database.ConnectDB();
+                conn.Open();
+
+                string query = string.Format("Insert into users values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", name, uname, email, gender, pass, type, salary);
+                SqlCommand cmd = new SqlCommand(query, conn);
+                int r = cmd.ExecuteNonQuery();
+                if (r > 0)
+                {
+                    MessageBox.Show("New Account Created");
+                    new Login().Show();
+                }
+                else
+                {
+                    MessageBox.Show("Error");
+                    new Form1().Show();
+                }
+                conn.Close();
+               RefreshControls();
+            }
+            else 
+            { 
+             MessageBox.Show(errMsg);
+            }
+        }
+        void RefreshControls() 
+        {
+            tbName.Text = "";
+            tbUname.Text = "";
+            tbEmail.Text = "";
+            tbPass.Text = "";
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)

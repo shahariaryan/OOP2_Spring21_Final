@@ -21,12 +21,34 @@ namespace Project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            {
+           
                 this.Hide();
                 string uname = tbUname.Text;
                 string pass = tbPass.Text;
                 string type = "manager";
 
+
+            string errMsg = null;
+            if (tbUname.Text.Equals(""))
+            {
+                errMsg += "\nUsername Requried";
+            }
+            else
+            {
+                uname = tbUname.Text;
+            }
+
+            if (tbPass.Text.Equals(""))
+            {
+                errMsg += "\nPassword Requried";
+            }
+            else
+            {
+                pass = tbPass.Text;
+            }
+
+            if (errMsg == null)
+            {
 
                 var conn = Database.ConnectDB();
                 conn.Open();
@@ -43,7 +65,23 @@ namespace Project
                     MessageBox.Show("Not Valid");
                     new ManagerLogin().Show();
                 }
+                conn.Close();
+                RefreshControls();
             }
+            else
+            {
+                MessageBox.Show(errMsg);
+                new ManagerLogin().Show();
+            }
+
+
+        }
+
+        void RefreshControls()
+        {
+            tbUname.Text = "";
+            tbPass.Text = "";
+
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)

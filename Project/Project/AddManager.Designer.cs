@@ -75,7 +75,7 @@ namespace Project
             // tbEmail
             // 
             this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmail.Location = new System.Drawing.Point(228, 220);
+            this.tbEmail.Location = new System.Drawing.Point(228, 222);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(241, 29);
             this.tbEmail.TabIndex = 25;

@@ -28,27 +28,78 @@ namespace Project
             this.Hide();
             string name = tbName.Text;
             string type = gbType.Controls.OfType<RadioButton>().FirstOrDefault(rb => rb.Checked).Text; ;
-            var price = tbPrice.Text; 
+            var price = tbPrice.Text;
             string quantity = tbQuantity.Text;
 
-            var conn = Database.ConnectDB();
-            conn.Open();
-
-            string query = string.Format("Insert into orders values ('{0}','{1}','{2}','{3}')", name, type, price, quantity);
-            SqlCommand cmd = new SqlCommand(query, conn);
-            int r = cmd.ExecuteNonQuery();
-            if (r > 0)
+            string errMsg = null;
+            if (tbName.Text.Equals(""))
             {
-                MessageBox.Show("Order Added");
-                new Dashboard().Show();
+                errMsg += "\nName Requried";
             }
             else
             {
-                MessageBox.Show("Error");
+                name = tbName.Text;
             }
-            conn.Close();
+            /*if (!gbType.Checked)
+            {
+                errMsg += "\nType Requried";
+            }
+            else
+            {
+                type = gbType.Controls.OfType<RadioButton>().FirstOrDefault(rb => rb.Checked).Text; ;
+            }*/
+            if (tbPrice.Text.Equals(""))
+            {
+                errMsg += "\nPrice Requried";
+            }
+            else
+            {
+                price = tbPrice.Text;
+            }
+            if (tbQuantity.Text.Equals(""))
+            {
+                errMsg += "\nQuantity Requried";
+            }
+            else
+            {
+                quantity = tbQuantity.Text;
+            }
+
+
+            if (errMsg == null)
+            {
+                var conn = Database.ConnectDB();
+                conn.Open();
+
+                string query = string.Format("Insert into orders values ('{0}','{1}','{2}','{3}')", name, type, price, quantity);
+                SqlCommand cmd = new SqlCommand(query, conn);
+                int r = cmd.ExecuteNonQuery();
+                if (r > 0)
+                {
+                    MessageBox.Show("Order Added");
+                    new Dashboard().Show();
+                }
+                else
+                {
+                    MessageBox.Show("Error");
+                }
+                conn.Close();
+                RefreshControls();
+            }
+            else
+            {
+                MessageBox.Show(errMsg);
+
+            }
         }
-          protected override void OnFormClosing(FormClosingEventArgs e)
+        void RefreshControls()
+        {
+            tbName.Text = "";
+            tbQuantity.Text = "";
+            tbPrice.Text = "";
+
+        }
+        protected override void OnFormClosing(FormClosingEventArgs e)
           {
             base.OnFormClosing(e);
             if (e.CloseReason != CloseReason.WindowsShutDown)

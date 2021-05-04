@@ -72,7 +72,7 @@ namespace Project
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new ManagerDash().Show();
+            new AdminDash().Show();
         }
 
         private void tbSearchName_TextChanged(object sender, EventArgs e)
